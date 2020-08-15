@@ -15,14 +15,12 @@ Need to use cisc-525-util repository to:
 
 ```shell script
 ./word_count_run.sh /user/student/shakespeare/tragedy/othello.txt /tmp/othello
-hdfs dfs -cat /tmp/othelo/part-00000
 ```
 
 ## Run airline performance MR application
 
 ```shell script
-./airline_run.sh flights_by_carriers_mapper.py flights_by_carriers_reducer.py /user/student/airline/1987.csv /tmp/1987
-hdfs dfs -cat /tmp/1987/part-00000
+./fbc_run.sh /user/student/airline/1987.csv /tmp/1987
 ```
 
 ## Unit test
