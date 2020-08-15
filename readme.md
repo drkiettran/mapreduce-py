@@ -14,15 +14,31 @@ Need to use cisc-525-util repository to:
 ## Run Word Count MR application
 
 ```shell script
-cd word_count
-./word_count_run.sh word_count_mapper.py word_count_reducer.py /user/student/shakespeare/tragedy/othello.txt /tmp/othello
+./word_count_run.sh /user/student/shakespeare/tragedy/othello.txt /tmp/othello
 hdfs dfs -cat /tmp/othelo/part-00000
 ```
 
 ## Run airline performance MR application
 
 ```shell script
-cd air-traffic
 ./airline_run.sh flights_by_carriers_mapper.py flights_by_carriers_reducer.py /user/student/airline/1987.csv /tmp/1987
 hdfs dfs -cat /tmp/1987/part-00000
 ```
+
+## Unit test
+
+```shell script
+pip3 install pytest
+```
+
+```shell script
+pytest -s ./test/unit/WordCountMapper_test.pytest
+coverage run --source=app -m pytest 
+coverage report -m
+```
+
+- include these in the __init__.py:
+````python
+import sys
+sys.path.append('.')
+````

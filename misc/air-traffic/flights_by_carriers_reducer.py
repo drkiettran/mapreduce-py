@@ -4,6 +4,7 @@ import sys
 import socket
 import re
 
+
 class FlightsByCarriersReducer:
     def __init__(self):
         # initial code
