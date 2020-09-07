@@ -30,7 +30,7 @@ pip3 install pytest
 ```
 
 ```shell script
-pytest -s ./test/unit/WordCountMapper_test.pytest
+pytest 
 coverage run --source=app -m pytest 
 coverage report -m
 ```
