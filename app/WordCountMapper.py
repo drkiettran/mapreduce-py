@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-import sys
-import string
 import re
+import sys
 
 
 class WordCountMapper:
