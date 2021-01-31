@@ -40,3 +40,14 @@ coverage report -m
 import sys
 sys.path.append('.')
 ````
+
+## Unicode problems with csv files:
+
+```
+file -i ~/data/airline/2001.csv
+iconv -f ISO-8859-1 -t UTF-8 ~/data/airline/2001.csv > ~/data/airline/2001_utf8.csv
+file -i ~/data/airline/2001_utf8.csv
+```
+
+Thank you to Qiao Meng for the commands.
+
